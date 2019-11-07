@@ -53,16 +53,14 @@ public class SampleTree implements BinaryTree{
 	 */
 	public static SampleTree buildSample() {
 		SampleTree sample = new SampleTree();
-		sample.addNode(new IntNode(5));
-		sample.addNode(new IntNode(3));
-		sample.addNode(new IntNode(2));
-		sample.addNode(new IntNode(1));
-		sample.addNode(new IntNode(7));
-		sample.addNode(new IntNode(8));
-		sample.addNode(new IntNode(4));
-		sample.addNode(new IntNode(9));
+		
 		sample.addNode(new IntNode(0));
-		sample.addNode(new IntNode(6));
+		
+		for(int i = 1; i<100; i++) {
+			sample.addNode(new IntNode(100+i));
+			sample.addNode(new IntNode(100-i));
+		}
+
 		return sample;
 	}
 
