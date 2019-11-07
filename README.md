@@ -14,7 +14,7 @@ It relies heavily on the API written by Laszlo Szathmary which i modified to wor
   ```
   according to your setup. ```TEMP_DIR``` should be the place where you want the program to create temporary files and ```DOT_LOC``` should point to the ```dot.exe``` of the Graphviz software.
 
-- You can now now call
+- You can now call
 
   ```
   TreeDrawer.drawTree(tree, filePath, fileName, fileFormat)
@@ -22,9 +22,10 @@ It relies heavily on the API written by Laszlo Szathmary which i modified to wor
   for any tree that implements the given BinaryTree interface to store a render of your tree to *filePath/fileName.fileFormat*
 
 ## Example
-Calling ```TreeDrawer.drawTree()``` on a binary-search-tree over the array ```{0,1,2,3,4,5,6,7,8,9}``` 
+Calling ```TreeDrawer.drawTree()``` on a binary-search-tree over the array ```{5,3,2,1,7,8,4,9,0,6}``` 
 renders and stores the following image
-![binary-search-tree](link)
+
+![binary-search-tree](https://raw.githubusercontent.com/SvenPfiffner/BinaryTreeVisualizer/master/test.png)
 
 For detailed examples refer to 
 - ```main.java```  to see how to call drawTree
