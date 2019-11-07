@@ -1,5 +1,7 @@
 package binaryTree;
 
+import java.util.Random;
+
 /**
  * An example of an implementation of the BinaryTree interface. This
  * tree does not meet any balance-properties, it should only serve as an example
@@ -12,7 +14,7 @@ public class SampleTree implements BinaryTree{
 	public SampleTree() {}
 	public SampleTree(IntNode node) {this.root = node;}
 	
-	public void addNode(IntNode node) {
+	public void addNode(IntNode node) throws AssertionError{
 		if(root == null) {
 			root = node;
 			return;
@@ -54,11 +56,12 @@ public class SampleTree implements BinaryTree{
 	public static SampleTree buildSample() {
 		SampleTree sample = new SampleTree();
 		
-		sample.addNode(new IntNode(0));
+		Random rand = new Random();
 		
-		for(int i = 1; i<100; i++) {
-			sample.addNode(new IntNode(100+i));
-			sample.addNode(new IntNode(100-i));
+		for(int i = 0; i<25; i++) {
+			try {
+				sample.addNode(new IntNode(rand.nextInt(100)));
+			} catch (AssertionError e) {}
 		}
 
 		return sample;
